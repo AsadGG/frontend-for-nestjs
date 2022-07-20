@@ -1,0 +1,28 @@
+<div class="box" *ngIf="task">
+  <div class="row">
+    <div class="col-12 mb-2">
+      <div class="title">{{ task.title }}</div>
+    </div>
+    <div class="col-12 mb-4">
+      <div class="description">{{ task.description }}</div>
+    </div>
+    <div class="col-12 mb-2 d-flex justify-content-between">
+      <select
+        class="form-control form-control-lg w-25"
+        [(ngModel)]="task.status"
+        (ngModelChange)="statusChange($event)"
+      >
+        <option value="OPEN">Open</option>
+        <option value="IN_PROGRESS">In Progress</option>
+        <option value="DONE">Done</option>
+      </select>
+      <button
+        type="button"
+        (click)="deleteTask()"
+        class="delete-button btn btn-danger"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

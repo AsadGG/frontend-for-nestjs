@@ -1,0 +1,24 @@
+:host {
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row {
+      .box {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        .heading {
+          font-weight: bold;
+          font-size: 2rem;
+          margin-block: 1rem;
+        }
+        .form-control.ng-touched.ng-invalid {
+          border-color: rgb(250, 9, 9);
+          box-shadow: 0 0 0 0.25rem rgba(250, 9, 9, 0.25);
+        }
+      }
+    }
+  }
+}

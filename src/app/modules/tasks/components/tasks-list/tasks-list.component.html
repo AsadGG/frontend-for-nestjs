@@ -1,0 +1,14 @@
+<div class="no-task text-center" *ngIf="!tasks.length">
+  <div class="heading">No Tasks Available. Create One ?</div>
+</div>
+<div class="tasks" *ngIf="tasks.length">
+  <ng-container *ngFor="let task of tasks">
+    <div class="task my-3">
+      <app-task-item
+        (onDeleteTask)="deleteTaskById(task.id)"
+        (onTaskStatusChange)="taskStatusChangeById(task.id, $event)"
+        [task]="task"
+      ></app-task-item>
+    </div>
+  </ng-container>
+</div>

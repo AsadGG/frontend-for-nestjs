@@ -1,0 +1,50 @@
+<div class="box">
+  <div class="row">
+    <div class="col-12">
+      <span class="heading"> Hello! </span>
+    </div>
+    <div class="col-12">
+      <span class="description">
+        Fill in your username and password to SignIn.
+      </span>
+    </div>
+    <form class="from" [formGroup]="signinForm" (ngSubmit)="onSignin()">
+      <div class="my-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          class="form-control"
+          type="text"
+          id="username"
+          name="username"
+          formControlName="username"
+          placeholder="Username"
+        />
+      </div>
+      <div class="my-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          class="form-control"
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+          placeholder="Password"
+        />
+      </div>
+      <button
+        [disabled]="signinForm.invalid"
+        type="submit"
+        class="my-2 w-100 btn btn-primary"
+      >
+        Sign In
+      </button>
+      <button
+        type="button"
+        routerLink="../signup"
+        class="my-2 w-100 btn btn-secondary"
+      >
+        Don't Have An Account ? Sign Up Now!
+      </button>
+    </form>
+  </div>
+</div>

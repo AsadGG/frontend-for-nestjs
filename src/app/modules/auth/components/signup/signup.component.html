@@ -1,0 +1,57 @@
+<div class="box">
+  <div class="row">
+    <div class="col-12">
+      <span class="heading"> Join Us! </span>
+    </div>
+    <div class="col-12">
+      <span class="description"> Start Managing Your Tasks Easily. </span>
+    </div>
+    <form class="from" [formGroup]="signupForm" (ngSubmit)="onSignup()">
+      <div class="my-3">
+        <label for="username" class="form-label"> Username </label>
+        <input
+          class="form-control"
+          type="text"
+          id="username"
+          name="username"
+          formControlName="username"
+          placeholder="Username"
+        />
+      </div>
+      <div class="my-3">
+        <label for="password" class="form-label"> Password </label>
+        <input
+          class="form-control"
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+          placeholder="Password"
+        />
+        <div id="password-help-1" class="form-text">
+          Passwords must contain at least 1 upper case letter,
+        </div>
+        <div id="password-help-2" class="form-text">
+          Passwords must contain at least 1 lower case letter,
+        </div>
+        <div id="password-help-3" class="form-text">
+          Passwords must contain at least 1 number or special character
+        </div>
+      </div>
+      <button
+        [disabled]="signupForm.invalid"
+        type="submit"
+        class="my-2 w-100 btn btn-primary"
+      >
+        Sign Up
+      </button>
+      <button
+        type="button"
+        routerLink="../signin"
+        class="my-2 w-100 btn btn-secondary"
+      >
+        Have An Account ? Sign In Now!
+      </button>
+    </form>
+  </div>
+</div>

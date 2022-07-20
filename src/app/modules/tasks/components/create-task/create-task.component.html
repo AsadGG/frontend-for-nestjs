@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row w-50">
+    <div class="box">
+      <div class="row">
+        <div class="col-12">
+          <span class="heading"> Create A New Task </span>
+        </div>
+        <div class="col-12">
+          <span class="description">
+            Provide Information about the task you want to create.
+          </span>
+        </div>
+        <form
+          class="from"
+          [formGroup]="createTaskForm"
+          (ngSubmit)="onCreateTask()"
+        >
+          <div class="my-3">
+            <label for="title" class="form-label">Title</label>
+            <input
+              class="form-control"
+              type="text"
+              id="title"
+              name="title"
+              formControlName="title"
+              placeholder="Title"
+            />
+          </div>
+          <div class="my-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea
+              rows="4"
+              class="form-control"
+              type="description"
+              id="description"
+              name="description"
+              formControlName="description"
+              placeholder="Description"
+            ></textarea>
+          </div>
+          <button
+            [disabled]="createTaskForm.invalid"
+            type="submit"
+            class="my-2 w-100 btn btn-primary"
+          >
+            Create Task
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
