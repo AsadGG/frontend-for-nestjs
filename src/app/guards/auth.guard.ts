@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Injectable } from "@angular/core";
-import { CanLoad, Router, Route, UrlSegment } from "@angular/router";
-import { Observable } from "rxjs";
-import { UserService } from "../services";
+import { Injectable } from '@angular/core';
+import { CanLoad, Router, Route, UrlSegment } from '@angular/router';
+import { Observable } from 'rxjs';
+import { UserService } from '../services';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class AuthGuard implements CanLoad {
   constructor(
@@ -20,7 +20,7 @@ export class AuthGuard implements CanLoad {
     if (auth) {
       return true;
     }
-    this.router.navigate(["/auth/login"]);
+    this.router.navigate(['/auth/']);
     return false;
   }
 }

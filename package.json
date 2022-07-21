@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "node prebuild.js && ng build --base-href \"/frontend-for-nestjs/\"",
+    "build": "ng build --base-href \"/frontend-for-nestjs/\"",
     "prebuild": "node prebuild.js",
     "watch": "ng build --watch --configuration development"
   },
