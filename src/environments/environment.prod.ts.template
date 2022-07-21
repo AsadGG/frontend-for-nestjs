@@ -1,0 +1,4 @@
+export const environment = {
+  production: true,
+  baseUrl: '<%= ANGULAR_APP_BASE_URL %>',
+};
